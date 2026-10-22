@@ -37,6 +37,6 @@ func firefoxRoots(b Browser) []string {
 			filepath.Join(home, ".var", "app", "io.gitlab.librewolf-community", ".librewolf"),
 		}
 	default: // BrowserFirefox
-		return []string{filepath.Join(home, ".mozilla", "firefox")}
+		return firefoxInstallRoots(home)
 	}
 }

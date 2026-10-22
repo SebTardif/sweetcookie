@@ -10,8 +10,15 @@ import (
 func TestFirefoxRoots_CommunityLinux(t *testing.T) {
 	home := t.TempDir()
 	t.Setenv("HOME", home)
+	t.Setenv("XDG_CONFIG_HOME", filepath.Join(home, "xdg"))
 
 	cases := map[Browser][]string{
+		BrowserFirefox: {
+			filepath.Join(home, "snap", "firefox", "common", ".mozilla", "firefox"),
+			filepath.Join(home, ".var", "app", "org.mozilla.firefox", ".mozilla", "firefox"),
+			filepath.Join(home, "xdg", "mozilla", "firefox"),
+			filepath.Join(home, ".mozilla", "firefox"),
+		},
 		BrowserZen: {
 			filepath.Join(home, ".zen"),
 			filepath.Join(home, ".var", "app", "app.zen_browser.zen", ".zen"),

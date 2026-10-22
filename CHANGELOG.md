@@ -2,6 +2,8 @@
 
 ## v0.0.3 - Unreleased
 
+- Read Linux Firefox profiles from the snap, Flatpak, and XDG config directories as well as `~/.mozilla/firefox`.
+
 - Move macOS CI to the Apple Silicon `xcode-27` runner and keep the macOS coverage gate enabled.
 
 - Update the SQLite driver to v1.58.0 and its matching libc dependency; use Go 1.25.14 for development and CI while preserving Go 1.25.0 support.
