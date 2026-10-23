@@ -2,7 +2,9 @@
 
 ## v0.0.3 - Unreleased
 
-- Read Linux Firefox profiles from the snap, Flatpak, and XDG config directories as well as `~/.mozilla/firefox`.
+- Discover Linux Firefox profiles from Snap, Flatpak, and XDG roots while preserving legacy cookie precedence and ignoring relative XDG roots. Thanks @SebTardif (#12).
+- Make formatting checks fail when a formatter fails and ignore piped stdin when formatting repository files.
+- Use patched Go 1.27.3 for development, CI, and release verification; refresh compatible format/lint tools while retaining the Go 1.25.0 module minimum.
 
 - Move macOS CI to the Apple Silicon `xcode-27` runner and keep the macOS coverage gate enabled.
 
